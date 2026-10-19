@@ -13,6 +13,7 @@ Complete the interactive tutorial.
 
 _Did you hit any points of frustration, and if so, how could we improve the material to avoid that frustration?_
 
+Nope!
 
 ## Problem 1
 
@@ -52,7 +53,13 @@ sequence.gb<br>
 slides<br>
 vader.txt<br>
 
-_Paste your SCRIPT here (not the output)_
+#!/bin/bash <br>
+echo "My username is $(whoami)" > question01.txt <br>
+echo "My home directory is $HOME" >> question01.txt <br>
+echo "The contents of the tfcb_2026/lectures/lecture04/ directory are" >> question01.txt <br>
+ls "$HOME/tfcb_2026/lectures/lecture04/" >> question01.txt <br>
+mkdir -p homework02 <br>
+mv question01.txt homework02/ <br>
 
 
 ## Problem 2
@@ -75,6 +82,13 @@ tfcb_2023/homeworks/homework02/list.txt
 
 You can make the contents of those files whatever you want (hint: slide 9... )
 
-_Paste your SCRIPT here (not the output)_
+#!/bin/bash <br>
 
+LIST="$HOME/tfcb_2026/homeworks/homework02/list.txt" <br>
+
+mkdir -p homework02/question02 <br>
+
+for num in $(cat "$LIST"); do <br>
+    echo "yippee, file $num" > homework02/question02/file${num}.txt <br>
+done <br>
 
